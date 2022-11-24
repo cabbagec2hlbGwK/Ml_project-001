@@ -18,6 +18,8 @@ def pred(model, csvv):
 def train(modelNmae, times):
     # get data
     data = pd.read_csv("data/data.csv")
+    # data = data.drop(data[data['time '] == 2].index)
+    # data = data.drop(columns="time ")
     predict = 1
     modelNmae = f"model/{modelNmae}"
     x = data[:-predict]
